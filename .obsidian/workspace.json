@@ -11,10 +11,14 @@
             "id": "ca39c0e1db6f18ef",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "그래프 뷰"
+              "type": "markdown",
+              "state": {
+                "file": "frontend/architecture/monorepo/01-concept.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "01-concept"
             }
           }
         ]
@@ -109,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "frontend/architecture/monorepo/01-concept.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "나가는 링크"
+              "title": "01-concept 의 나가는 링크"
             }
           },
           {
@@ -151,16 +156,27 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "frontend/architecture/monorepo/01-concept.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "개요"
+              "title": "01-concept 의 개요"
+            }
+          },
+          {
+            "id": "94f3a16d3a2365b1",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -174,10 +190,11 @@
       "daily-notes:오늘의 일일 노트 열기": false,
       "templates:템플릿 삽입": false,
       "command-palette:명령어 팔레트 열기": false,
-      "bases:새 베이스 생성하기": false
+      "bases:새 베이스 생성하기": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "bfda5396d5cff00d",
+  "active": "ca39c0e1db6f18ef",
   "lastOpenFiles": [
     "frontend/architecture/monorepo/06-Monorepo 도구 비교 정리.md",
     "frontend/architecture/monorepo/05-turborepo.md",
