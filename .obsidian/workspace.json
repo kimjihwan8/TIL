@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/architecture/monorepo/01-concept.md",
+                "file": "frontend/architecture/monorepo/02-workspaces.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01-concept"
+              "title": "02-workspaces"
             }
           }
         ]
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "frontend/architecture/monorepo/01-concept.md",
+                "file": "frontend/architecture/monorepo/02-workspaces.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "01-concept 의 나가는 링크"
+              "title": "02-workspaces 의 나가는 링크"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "frontend/architecture/monorepo/01-concept.md",
+                "file": "frontend/architecture/monorepo/02-workspaces.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "01-concept 의 개요"
+              "title": "02-workspaces 의 개요"
             }
           },
           {
@@ -196,12 +196,12 @@
   },
   "active": "ca39c0e1db6f18ef",
   "lastOpenFiles": [
+    "frontend/architecture/monorepo/01-concept.md",
     "frontend/architecture/monorepo/06-Monorepo 도구 비교 정리.md",
     "frontend/architecture/monorepo/05-turborepo.md",
     "frontend/architecture/monorepo/04-nx.md",
     "frontend/architecture/monorepo/03-lerna.md",
     "frontend/architecture/monorepo/02-workspaces.md",
-    "frontend/architecture/monorepo/01-concept.md",
     "frontend/architecture/monorepo/README.md",
     "README.md",
     "frontend/javascript/스코프.md",
