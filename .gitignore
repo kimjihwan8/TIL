@@ -1,5 +1,4 @@
 무제/
-
+.obsidian/
 **/.obsidian/
-
-/.gitignore
+.DS_Store
