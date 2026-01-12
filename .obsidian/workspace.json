@@ -192,8 +192,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ca39c0e1db6f18ef",
+  "active": "94f3a16d3a2365b1",
   "lastOpenFiles": [
+    "frontend/architecture/monorepo/06-Monorepo도구 비교 정리.md",
     "frontend/architecture/monorepo/02-workspaces.md",
     "frontend/architecture/monorepo/README.md",
     "무제.md",
