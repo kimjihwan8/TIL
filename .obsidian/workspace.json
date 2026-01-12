@@ -11,14 +11,14 @@
             "id": "ca39c0e1db6f18ef",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "무제.md",
-                "mode": "source",
-                "source": false
+                "aFile": ".obsidian/workspace.json",
+                "bFile": ".obsidian/workspace.json",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "무제"
+              "icon": "diff",
+              "title": "Diff: workspace.json  (Working Tree)"
             }
           }
         ]
@@ -113,12 +113,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "무제.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "무제 의 나가는 링크"
+              "title": "나가는 링크"
             }
           },
           {
@@ -156,13 +155,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "무제.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "무제 의 개요"
+              "title": "개요"
             }
           },
           {
@@ -197,13 +195,13 @@
   "active": "ca39c0e1db6f18ef",
   "lastOpenFiles": [
     "frontend/architecture/monorepo/02-workspaces.md",
+    "frontend/architecture/monorepo/README.md",
     "무제.md",
     "frontend/architecture/monorepo/01-concept.md",
     "frontend/architecture/monorepo/06-Monorepo 도구 비교 정리.md",
     "frontend/architecture/monorepo/05-turborepo.md",
     "frontend/architecture/monorepo/04-nx.md",
     "frontend/architecture/monorepo/03-lerna.md",
-    "frontend/architecture/monorepo/README.md",
     "README.md",
     "frontend/javascript/스코프.md",
     "frontend/architecture/무제.md",
