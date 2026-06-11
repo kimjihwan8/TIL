@@ -8,7 +8,7 @@ gstack은 단순한 프롬프트 모음이 아니라, 마크다운 표준을 기
 ### 2.1 Agentic Engineering의 정수
 
 - 기존 방식: AI에게 "코드 짜줘" 하고 끝내는 단발성 챗봇 형태.
-- gstack의 방식: 스스로 계획을 세우고 상호 검증하는 멀티 에이전트(Multi-Agent) 루프를 구현했다. 예를 들어 `/office-hours`가 끝난 산출물을 `/plan-ceo-review`와 `/plan-eng-review` 스킬이 바톤 터치하듯 자동으로 넘겨받아 검토하는 파이프라인을 구축했다.
+- gstack의 방식: 스스로 계획을 세우고 상호 검증하는 멀티 에이전트 루프를 구현했다. 예를 들어 `/office-hours`가 끝난 산출물을 `/plan-ceo-review`와 `/plan-eng-review` 스킬이 바톤 터치하듯 자동으로 넘겨받아 검토하는 파이프라인을 구축했다.
 
 ### 2.2 Harness Engineering과의 결합
 
@@ -67,11 +67,9 @@ gstack은 단순한 프롬프트 모음이 아니라, 마크다운 표준을 기
 |`/setup-browser-cookies`|**세션 매니저**|Chrome, Arc, Brave, Edge에서 쿠키 가져와 헤드리스 세션에 임포트|
 |`/gstack-upgrade`|**셀프 업데이터**|gstack을 최신 버전으로 업그레이드. 글로벌/벤더 설치 자동 감지|
 
-출처: [https://goddaehee.tistory.com/570](https://goddaehee.tistory.com/570) [갓대희의 작은공간:티스토리]
-
-출처: [https://goddaehee.tistory.com/570](https://goddaehee.tistory.com/570) [갓대희의 작은공간:티스토리]
-
 ## 프론트엔드 개발자로서 느낀 점 및 인사이트
 
 1. 바이브 코딩의 종말: 이제는 무작정 채팅창에 코드를 쳐달라고 구걸하는 시대가 아니다. gstack처럼 AI에게 명확한 역할과 스펙, 그리고 검증 도구를 쥐여주고 프로세스로 통제하는 개발자가 살아남는다.
 2. CLAUDE.md의 중요성: gstack의 스킬들은 하드코딩된 규칙이 아니라, 프로젝트 루트에 있는 CLAUDE.md를 읽어 해당 프로젝트의 컨벤션, 빌드 명령어를 스스로 학습한다. 프론트엔드 프로젝트를 할 때 AI 에이전트가 내 코드를 망치지 않게 하려면 컨텍스트 가이드라인을 정교하게 다듬는 능력이 필수적임을 깨달았다.
+
+출처: [https://goddaehee.tistory.com/570](https://goddaehee.tistory.com/570) [갓대희의 작은공간:티스토리]
