@@ -21,8 +21,6 @@ node_modules가 있으면 생기는 문제들:
 
 그래서 yarn v2(berry)에서 node_modules를 아예 없애는 방식을 도입했는데 이게 PnP(Plug'n'Play)다.
 
----
-
 ## PnP가 동작하는 방식
 ### 기존 방식
 ```
@@ -57,15 +55,11 @@ yarn install
 
 `import react` 하면 Node.js가 위로 올라가며 탐색하는 게 아니라, .pnp.cjs를 보고 바로 위치를 찾아간다. 파일 탐색이 없어지니까 훨씬 빠르다.
 
----
-
 ## zip 파일을 어떻게 실행함?
 
 .yarn/cache에 있는 건 압축 파일이다. 근데 Node.js는 원래 zip을 직접 읽지 못한다.
 그래서 yarn berry는 Node.js의 require()나 import가 실행되기 전에 끼어들어서 .pnp.cjs를 먼저 확인하고, .yarn/cache에 있는 파일들을 읽어서 Node,js에 넘겨줌. 
 개발자 입장에선 그냥 평소처럼 import 하면 됨.
-
----
 
 ## 유령 의존성이 원천 차단되는 이유
 기존엔 Node.js가 node_modules를 위로 올라가며 탐색하니까 호이스팅된 패키지에 접근이 됐다.
@@ -76,8 +70,6 @@ import looseEnvify from 'loose-envify'
 ```
 
 파일이 .yarn/cache에 있어도 .pnp.cjs에 없으면 접근 자체가 안됨.
-
----
 
 ## PnP 단점
 ### IDE 호환성 문제
@@ -95,8 +87,6 @@ yarn dlx @yarnpkg/sdks vscode
 ### 패키지 호환성 문제
 일부 패키지는 내부적으로 node_modules 경로를 하드코딩해놔서 PnP 환경에서 동작을 안함. 이 경우엔 해당 패키지만 node_modules에 설치하도록 예외 처리할 수 있음.
 
----
-
 ## PnP 도입 전후 비교
 
 | 🥑      | 기존 (node_modules) | PnP                |
@@ -107,4 +97,4 @@ yarn dlx @yarnpkg/sdks vscode
 | IDE 지원  | 기본 지원             | SDK 설치 필요          |
 | 패키지 호환성 | 대부분 됨             | 일부 패키지 문제 있음       |
 | git 추적  | 불가                | 가능 -> Zero Install |
-|         |                   |                    |
+
