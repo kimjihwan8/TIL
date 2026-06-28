@@ -37,7 +37,7 @@ esbuild 같은 패키지는 설치할 때 OS에 맞는 바이너리를 컴파일
 - OS마다 달라서 git에 올리면 안 됨
 - 용량이 커서 저장소에 넣기엔 살짝 애매함
 
-그래서 `.gitignore`에 이렇게 설정해:
+그래서
 
 ```
 .yarn/*
@@ -45,9 +45,7 @@ esbuild 같은 패키지는 설치할 때 OS에 맞는 바이너리를 컴파일
 .yarn/unplugged   # unplugged는 git에 안 올림
 ```
 
-결과적으로 `git clone` 받고 바로 실행하면 esbuild 같은 게 없어서 오류가 나. 이 경우엔 `yarn install`을 한 번 해줘야 해. `yarn install`이 `.yarn/cache`는 이미 있으니까 다운로드는 스킵하고 unplugged 폴더만 채워줘.
-
-bash
+하지만 git clone 받고 바로 실행하면 esbuild 같은 게 없어서 오류가 난다. 이 경우엔 yarn install을 한 번 해줘야 한다. yarn install을 하면 .yarn/cache는 이미 git clone해서 받아왔으니까 .yarn/unplugged 폴더만 채워준다.
 
 ```bash
 git clone https://github.com/team/project
@@ -55,7 +53,8 @@ cd project
 yarn install  # unplugged 패키지만 설치 (다운로드 없이 빠름)
 yarn dev      # 실행
 ```
-
+여기서 의문점이 생긴다. zero Install은 yarn install을 안해도 걍 바로 실행 가능한거 아녔음?
+맞는 말이다. 공식문서를 보면 unplugged도 git에 올리라고 되어있지만 앞에서 말한 이유로 보통 
 완전한 Zero Install은 아니지만, 네트워크 없이도 `yarn install`이 끝난다는 점에서 의미가 있어.
 
 ---
