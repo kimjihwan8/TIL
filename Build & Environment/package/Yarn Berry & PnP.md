@@ -13,7 +13,6 @@ yarn v2, v3, v4 → yarn berry
 yarn v1(classic)은 npm이랑 구조가 똑같다. flat + hoisting이라서 유령 의존성 문제도 그대로고, node_modules가 무겁다는 문제도 그대로다.
 
 yarn 팀은 "구지 node_modules가 있어야 함?" 이라는 근본적인 질문을 던졌다.
-
 node_modules가 있으면 생기는 문제들:
 - 패키지 수백 개면 파일이 수십만 개 → 설치 느림
 - 용량이 수 GB → 디스크 낭비
@@ -90,7 +89,7 @@ yarn dlx @yarnpkg/sdks vscode
 
 ## PnP 도입 전후 비교
 
-| 🥑      | 기존 (node_modules) | PnP                |
+| 🍣      | 기존 (node_modules) | PnP                |
 | ------- | ----------------- | ------------------ |
 | 설치 결과물  | 파일 수십만 개          | zip 파일 몇 백 개       |
 | 패키지 탐색  | 위로 올라가며 탐색        | .pnp.cjs 보고 바로 접근  |
