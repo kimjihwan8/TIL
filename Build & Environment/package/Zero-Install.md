@@ -11,17 +11,12 @@ yarn dev  # yarn install 없이 바로 실행
 
 # 그럼 걍 pnp 안쓰고 node_modules를 올려도 되는거 아님?
 - 용량 문제: 기존 node_modules는 용량이 너무 커서 이걸 git에 다 올리기에는 커밋 속도도 엄청 느려지고 저장소 용량이 폭발한다.
+	pnp를 쓰면 패키지당 zip 파일 하나여서 용량이 압도적으로 적음.
 - OS 문제: 또 일부 패키지는 설치할 때 OS에 맞는 바이너리를 컴파일해서 맥에서 올린 node_modules를 리눅스 CI에서 쓰면 동작 안 할 수 있다.
-하지만 pnp를 쓰면 패키지당 zip 파일 하나여서 용량이 압도적으로 적고 
-zip은 그냥 패키지 파일을 압축한 거라 OS랑 상관없음.
-
----
+	zip은 그냥 패키지 파일을 압축한 거라 OS랑 상관없음.
 
 # Zero Install 설정 방법
-
-`.gitignore`에서 `.yarn/cache`를 추적하도록 설정하면 끝이야.
-
-yarn berry 기본 `.gitignore`:
+걍 .gitignore에서 .yarn/cache를 git에 올리도록 설정하면 끝이다.
 
 ```
 .yarn/*
@@ -34,16 +29,13 @@ yarn berry 기본 `.gitignore`:
 .pnp.*            # 자동 생성되니까 올려도 되고 안 올려도 됨
 ```
 
----
+# unplugged 패키지
 
-# unplugged 패키지는 Zero Install에서 제외돼
+esbuild 같은 패키지는 설치할 때 OS에 맞는 바이너리를 컴파일한다. 그래서 zip으로 보관할 수 없어서 .yarn/unplugged/ 폴더에 풀려서 설치된다.
 
-esbuild 같은 패키지는 설치할 때 OS에 맞는 바이너리를 컴파일해. zip으로 보관할 수 없어서 `.yarn/unplugged/` 폴더에 풀려서 설치돼.
-
-근데 이 바이너리 파일들은:
-
+근데 이 바이너리 파일들은
 - OS마다 달라서 git에 올리면 안 됨
-- 용량이 커서 저장소에 넣기 부담스러움
+- 용량이 커서 저장소에 넣기엔 살짝 애매함
 
 그래서 `.gitignore`에 이렇게 설정해:
 
