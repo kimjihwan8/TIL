@@ -8,6 +8,7 @@ yarn v2, v3, v4 → yarn berry
 
 "berry"는 v2 개발할 때 yarn 팀이 붙인 공식 코드명인데 그대로 굳어졌다. 내부 구조, 설정 파일(`.yarnrc` → `.yarnrc.yml`), 플러그인 시스템 전부 새로 만든 거라 yarn classic에서 berry로 넘어가는 건 버전 업그레이드가 아니라 도구 교체 수준이다.
 
+
 ## Yarn Berry가 나온 이유
 yarn v1(classic)은 npm이랑 구조가 똑같다. flat + hoisting이라서 유령 의존성 문제도 그대로고, node_modules가 무겁다는 문제도 그대로다.
 
