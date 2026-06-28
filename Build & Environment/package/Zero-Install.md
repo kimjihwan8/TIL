@@ -54,16 +54,12 @@ yarn install  # unplugged 패키지만 설치 (다운로드 없이 빠름)
 yarn dev      # 실행
 ```
 여기서 의문점이 생긴다. zero Install은 yarn install을 안해도 걍 바로 실행 가능한거 아녔음?
-맞는 말이다. 공식문서를 보면 unplugged도 git에 올리라고 되어있지만 앞에서 말한 이유로 보통 
-완전한 Zero Install은 아니지만, 네트워크 없이도 `yarn install`이 끝난다는 점에서 의미가 있어.
-
----
+맞는 말이다. 공식문서를 보면 unplugged도 git에 올리라고 되어있지만 앞에서 말한 이유로 보통 사람들이 잘 안올린다.
+완전한 Zero Install은 아니지만, 네트워크 없이도 yarn install이 끝난다는 점,  .yarn/unplugged 폴더만 깔면되서 속도가 빨라진다는 점에서 의미가 있다.
 
 # 실제로 얼마나 빨라지냐
-
-CI랑 배포 환경 모두에서 효과가 있어.
-
-CI (GitHub Actions 같은 곳)
+CI랑 배포 환경, 개발환경 모두에서 효과가 있다.
+### CI
 
 ```
 Zero Install 없음:
@@ -73,37 +69,22 @@ yarn install  → 1~3분 (패키지 다운로드)
 
 Zero Install 있음:
 git clone     → 수십 초 (zip 포함이라 좀 더 걸림)
-yarn install  → 거의 0초 (unplugged만 있으면 몇 초)
+yarn install  → 0초 (unplugged을 깔아야하면 몇 초)
 빌드/테스트 시작
 ```
+### 배포
+배포 서버도 CI랑 똑같이 코드 받고 → 패키지 설치하고 → 빌드하는 흐름인데, Zero Install이 있으면 설치 단계가 없어지거나 극도로 짧아져서 배포 시간이 줄어든다.
 
-배포
+# 단점
 
-배포 서버도 CI랑 똑같이 매번 새로 시작해. 코드 받고 → 패키지 설치하고 → 빌드하는 흐름인데, Zero Install이 있으면 설치 단계가 없어지거나 극도로 짧아져서 배포 시간이 줄어들어.
+1. 저장소 용량이 커짐.
+	.yarn/cache에 zip 파일들이 다 들어가니까 저장소 자체가 무거워져서 패키지가 많은 프로젝트면 수백 MB가 될 수 있다.
+2. 패키지 추가/업데이트할 때 커밋이 커짐.
+	 패키지를 깔거나 수정하면 zip 파일이 추가되거나 수정되니까 그 커밋에 바이너리 파일이 포함되서 PR이 지저분해 보일 수 있다.
+3. 팀 합의가 필요함
+	팀 전체가 .yarn/cache를 git에 올리기로 동의해야 한다. 중간에 누가 .gitignore를 수정해버리면 꼬인다. 
 
-push할 때마다 반복되는 환경일수록 효과가 커.
-
----
-
-# 단점은 없어?
-
-저장소 용량이 커져
-
-`.yarn/cache`에 zip 파일들이 다 들어가니까 저장소 자체가 무거워져. 패키지 많은 프로젝트면 수백 MB가 될 수 있어.
-
-패키지 추가/업데이트할 때 커밋이 커져
-
-`yarn add some-package` 하면 zip 파일이 추가되니까 그 커밋에 바이너리 파일이 포함돼. diff가 의미없어지고 PR이 지저분해 보일 수 있어.
-
-팀 합의가 필요해
-
-Zero Install 쓰려면 팀 전체가 `.yarn/cache`를 git에 올리기로 동의해야 해. 중간에 누가 `.gitignore`에 추가해버리면 꼬여.
-
----
-
-# Zero Install 안 써도 PnP는 쓸 수 있어
-
-Zero Install이 PnP의 필수 조건은 아니야.
+# 정리
 
 ```
 PnP만 쓰는 경우:
@@ -117,4 +98,4 @@ PnP + Zero Install:
 → yarn install 스킵 가능 (unplugged 있으면 한 번은 필요)
 ```
 
-팀 상황에 따라 PnP만 쓰고 Zero Install은 안 쓰는 경우도 많아.
+팀 상황에 따라 PnP만 쓰고 Zero Install은 안 쓰는 경우도 많긴함.
