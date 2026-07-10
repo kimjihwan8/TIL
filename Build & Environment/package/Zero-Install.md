@@ -89,12 +89,12 @@ yarn install  → 0초 (unplugged을 깔아야하면 몇 초)
 # 정리
 
 ```
-PnP만 쓰는 경우:
+PnP만 쓰는 경우
 → node_modules 없애고 zip으로 관리
 → .yarn/cache는 git에 안 올림
 → yarn install은 여전히 필요
 
-PnP + Zero Install:
+PnP + Zero Install 쓰는 경우
 → node_modules 없애고 zip으로 관리
 → .yarn/cache도 git에 올림
 → yarn install 스킵 가능 (unplugged 있으면 한 번은 필요)
