@@ -4,7 +4,7 @@ yarn install 없이 git clone만 해도 바로 실행 가능한 상태를 만드
 ```bash
 git clone https://github.com/team/project
 cd project
-yarn dev  # yarn install 없이 바로 실행
+yarn dev  # yarn install 없이 바로 실행가능
 ```
 
 .yarn/cache에 있는 zip 파일들을 git에 같이 올려서 이런게 가능함
