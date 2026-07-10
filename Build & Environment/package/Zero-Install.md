@@ -63,12 +63,12 @@ CI랑 배포 환경, 개발환경 모두에서 효과가 있다.
 ### CI
 
 ```
-Zero Install 없음:
+Zero Install 없을때
 git clone     → 몇 초
 yarn install  → 1~3분 (패키지 다운로드)
 빌드/테스트 시작
 
-Zero Install 있음:
+Zero Install 있을때
 git clone     → 수십 초 (zip 포함이라 좀 더 걸림)
 yarn install  → 0초 (unplugged을 깔아야하면 몇 초)
 빌드/테스트 시작
