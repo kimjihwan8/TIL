@@ -11,9 +11,9 @@ yarn dev  # yarn install 없이 바로 실행가능
 
 # 그럼 걍 pnp 안쓰고 node_modules를 올려도 되는거 아님?
 - 용량 문제: 기존 node_modules는 용량이 너무 커서 이걸 git에 다 올리기에는 커밋 속도도 엄청 느려지고 저장소 용량이 폭발한다.
-	pnp를 쓰면 패키지당 zip 파일 하나여서 용량이 압도적으로 적음.
+	pnp를 쓰면 패키지당 zip 파일 하나여서 용량이 압도적으로 적음
 - OS 문제: 또 일부 패키지는 설치할 때 OS에 맞는 바이너리를 컴파일해서 맥에서 올린 node_modules를 리눅스 CI에서 쓰면 동작 안 할 수 있다.
-	zip은 그냥 패키지 파일을 압축한 거라 OS랑 상관없음.
+	zip은 그냥 패키지 파일을 압축한 거라 OS랑 상관없음
 
 # Zero Install 설정 방법
 걍 .gitignore에서 .yarn/cache를 git에 올리도록 설정하면 끝이다.
