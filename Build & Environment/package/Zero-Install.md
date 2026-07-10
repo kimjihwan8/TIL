@@ -54,6 +54,7 @@ yarn install  # unplugged 패키지만 설치 (다운로드 없이 빠름)
 yarn dev      # 실행
 ```
 여기서 의문점이 생긴다. zero Install은 yarn install을 안해도 걍 바로 실행 가능한거 아녔음?
+
 맞는 말이다. 공식문서를 보면 unplugged도 git에 올리라고 되어있지만 앞에서 말한 이유로 보통 사람들이 잘 안올린다.
 완전한 Zero Install은 아니지만, 네트워크 없이도 yarn install이 끝난다는 점,  .yarn/unplugged 폴더만 깔면되서 속도가 빨라진다는 점에서 의미가 있다.
 
