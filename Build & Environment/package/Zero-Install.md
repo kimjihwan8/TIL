@@ -50,7 +50,7 @@ esbuild 같은 패키지는 설치할 때 OS에 맞는 바이너리를 컴파일
 ```bash
 git clone https://github.com/team/project
 cd project
-yarn install  # unplugged 패키지만 설치 (다운로드 없이 빠름)
+yarn install  # unplugged 패키지만 설치 (다운로드 없이 빠름).
 yarn dev      # 실행
 ```
 여기서 의문점이 생긴다. zero Install은 yarn install을 안해도 걍 바로 실행 가능한거 아녔음?
