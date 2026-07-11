@@ -1,4 +1,5 @@
 # Zero Install이 뭐임?
+
 yarn install 없이 git clone만 해도 바로 실행 가능한 상태를 만드는 것이다.
 
 ```bash
